@@ -1,0 +1,61 @@
+<mat-toolbar color="primary">
+  <a mat-button routerLink="/">Inicio</a>
+  <a mat-button routerLink="/products">Contactos</a>
+
+</mat-toolbar>
+<mat-card>
+  <mat-card-title>Agregar Producto</mat-card-title>
+  <mat-card-content>
+    <form (submit)="newProduct()">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input
+          matInput
+          type="text"
+          name="name"
+          [(ngModel)]="name"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Stock</mat-label>
+        <input
+          matInput
+          type="number"
+          name="stock"
+          [(ngModel)]="stock"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Precio</mat-label>
+        <input matInput type="text" name="price" [(ngModel)]="price" />
+      </mat-form-field>
+      <mat-slide-toggle [(ngModel)]="active" [ngModelOptions]="{ standalone: true }"
+        >Activo</mat-slide-toggle
+      >
+
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha Entrada</mat-label>
+        <input
+          matInput
+          class="inputFecha"
+          [matDatepicker]="picker"
+          placeholder="Elige una fecha"
+          name="date_added"
+          [(ngModel)]="date_added"
+          [ngModelOptions]="{ standalone: true }"
+          readonly
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-card-actions
+        ><button mat-raised-button color="warn" type="submit">
+          Agregar
+        </button></mat-card-actions
+      >
+    </form>
+  </mat-card-content>
+</mat-card>

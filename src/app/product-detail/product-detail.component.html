@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <a mat-button routerLink="/">Inicio</a>
+  <a mat-button routerLink="/products">Productos</a>
+  <a mat-button routerLink="/new-product">Nuevo Producto</a>
+</mat-toolbar>
+<mat-card>
+    <mat-card-content>
+      <div class="nombres"><mat-card-title>{{ product.name }}</mat-card-title>
+      </div>
+      <mat-card-subtitle class="stock">{{ product.stock }} uds</mat-card-subtitle>
+      <mat-card-subtitle class="price">{{ product.price }} €</mat-card-subtitle>
+      <p class="active"><mat-slide-toggle [(ngModel)]="product.active" disabled>Activo</mat-slide-toggle></p>
+      <p class="date_added"><mat-icon>calendar_month</mat-icon>
+          {{ product.date_added | date: 'dd/MM/yyyy'}}</p>
+      <mat-card-actions><button mat-raised-button color="warn" (click)="gotoUpdateProduct()">Modificar</button></mat-card-actions>
+      
+    </mat-card-content>
+  </mat-card>

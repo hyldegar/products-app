@@ -1,0 +1,23 @@
+form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+mat-card{
+    margin-top: 20px;
+    width: 20%;
+    height: auto;
+    display: flexbox;
+    margin-left:20px;
+
+}
+
+.inputFecha{
+    max-width: 100%;
+}
+mat-slide-toggle{
+    margin-bottom: 10px
+}
+

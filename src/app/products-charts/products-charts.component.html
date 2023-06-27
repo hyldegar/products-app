@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+  <a mat-button routerLink="/">Inicio</a>
+  <a mat-button routerLink="/products">Productos</a>
+  <a mat-button routerLink="/new-product">Nuevo Producto</a>
+  <a mat-button routerLink="/pricebigger">Buesqueda por Precio Mayor</a>
+</mat-toolbar>
+<mat-card>
+  <mat-card-title> Gráficas de Productos</mat-card-title>
+</mat-card>
+
+<mat-card-content>
+  <div>
+    <ngx-charts-pie-chart
+      [view]="[700, 300]"
+      [doughnut]="true"
+      [legend]="true"
+      [results]="activosData"
+    ></ngx-charts-pie-chart>
+    <ngx-charts-pie-chart
+      [view]="[700, 300]"
+      [doughnut]="true"
+      [results]="precioMayor5"
+      [legend]="true"
+    ></ngx-charts-pie-chart>
+    <ngx-charts-pie-chart
+      [view]="[700, 300]"
+      [doughnut]="true"
+      [results]="stockSuficiente"
+      [legend]="true"
+      
+    ></ngx-charts-pie-chart>
+    <div *ngIf="dataReady">
+        <ngx-charts-pie-chart [view]="[900, 300]" [results]="stockProducto" [legend]="true"></ngx-charts-pie-chart>
+      </div>
+  </div>
+</mat-card-content>

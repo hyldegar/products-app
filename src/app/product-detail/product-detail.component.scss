@@ -1,0 +1,41 @@
+/**{
+    
+    font-family: Arial, Helvetica, sans-serif;
+}*/
+mat-card{
+    width: 20%;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(159, 193, 255);
+    
+}
+
+button{
+    padding: 5px 20px ;
+    width: auto;
+    float: right;
+    position: absolute;
+    right: 30px;
+    top: 120px;
+    
+}
+
+.nombres{
+    display: block;
+    align-items: center;
+    width: 100%;
+}
+mat-icon{
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.stock{
+    margin-left: 5px;
+    font-weight: bold;
+
+}
+.price{
+    margin-left: 5px;
+    font-weight: bold;
+}
